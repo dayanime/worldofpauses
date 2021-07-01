@@ -235,7 +235,7 @@ if (reversed == null) { reversed = false; }
 	// huella
 	this.huella = new lib.huellas();
 	this.huella.name = "huella";
-	this.huella.setTransform(356,20.05,1,1,0,0,0,14.7,5.5);
+	this.huella.setTransform(352.1,20.05,1,1,0,0,0,14.7,5.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.huella).wait(25));
 
@@ -283,7 +283,7 @@ if (reversed == null) { reversed = false; }
 	// titulo
 	this.titulo = new lib.Símbolo1();
 	this.titulo.name = "titulo";
-	this.titulo.setTransform(394.55,300,1,1,0,0,0,255.5,88.5);
+	this.titulo.setTransform(400.05,273.5,1,1,0,0,0,255.5,88.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.titulo).wait(1));
 
