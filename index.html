@@ -22,7 +22,7 @@
   }
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="index.js?1625163420686"></script>
+<script src="index.js?1626243409786"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -31,12 +31,26 @@ function init() {
 	dom_overlay_container = document.getElementById("dom_overlay_container");
 	var comp=AdobeAn.getComposition("301238912698CB4E81A369FA80FB69EE");
 	var lib=comp.getLibrary();
-	handleComplete({},comp);
+	createjs.MotionGuidePlugin.install();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
 }
 function handleComplete(evt,comp) {
 	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
 	var lib=comp.getLibrary();
 	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
 	exportRoot = new lib.index();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
@@ -56,7 +70,7 @@ function handleComplete(evt,comp) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Life+Savers&display=swap" rel="stylesheet">
 </head>
-<body onload="init();" style="margin:0px; background-color:#B9402D;" >
+<body onload="init();" style="margin:0px; background-color:black;" >
 	<div id="animation_container" style="background-color:rgba(231, 193, 120, 1.00); width:800px; height:600px">
 		<canvas id="canvas" width="800" height="600" style="position: absolute; display: block; background-color:rgba(231, 193, 120, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:800px; height:600px; position: absolute; left: 0px; top: 0px; display: block;">
