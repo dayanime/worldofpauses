@@ -22,7 +22,7 @@
   }
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="index.js?1626243409786"></script>
+<script src="index.js?1626397136792"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -33,6 +33,7 @@ function init() {
 	var lib=comp.getLibrary();
 	createjs.MotionGuidePlugin.install();
 	var loader = new createjs.LoadQueue(false);
+	loader.installPlugin(createjs.Sound);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
 	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
 	var lib=comp.getLibrary();
@@ -58,12 +59,15 @@ function handleComplete(evt,comp) {
 		stage.addChild(exportRoot);
 		createjs.Ticker.framerate = lib.properties.fps;
 		createjs.Ticker.addEventListener("tick", stage);
+		createjs.Ticker.addEventListener("tick", AdobeAn.handleSoundStreamOnTick);
 	}	    
 	//Code to support hidpi screens and responsive scaling.
 	AdobeAn.makeResponsive(true,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }
+function playSound(id, loop, offset) {
+	return createjs.Sound.play(id, {'interrupt':createjs.Sound.INTERRUPT_EARLY, 'loop': loop, 'offset': offset});}
 </script>
 <!-- write your code here -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
