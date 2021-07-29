@@ -16,7 +16,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
 	"sourceSize": {"w":800,"h":600}
 },
-"Capa94":
+"Capa41_1":
 {
 	"frame": {"x":0,"y":602,"w":800,"h":600},
 	"rotated": false,
@@ -24,7 +24,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
 	"sourceSize": {"w":800,"h":600}
 },
-"Capa94_1":
+"Capa94":
 {
 	"frame": {"x":0,"y":1204,"w":800,"h":600},
 	"rotated": false,
@@ -32,7 +32,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
 	"sourceSize": {"w":800,"h":600}
 },
-"Estrella1":
+"Capa94_1":
 {
 	"frame": {"x":802,"y":602,"w":800,"h":600},
 	"rotated": false,
@@ -40,7 +40,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
 	"sourceSize": {"w":800,"h":600}
 },
-"Estrella2":
+"circlelight":
 {
 	"frame": {"x":802,"y":1204,"w":800,"h":600},
 	"rotated": false,
