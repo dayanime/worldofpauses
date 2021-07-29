@@ -1,22 +1,6 @@
 ﻿{"frames": {
 
-"Capa94":
-{
-	"frame": {"x":0,"y":0,"w":800,"h":600},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
-	"sourceSize": {"w":800,"h":600}
-},
-"Capa94_1":
-{
-	"frame": {"x":802,"y":0,"w":800,"h":600},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
-	"sourceSize": {"w":800,"h":600}
-},
-"Estrella1":
+"Capa100":
 {
 	"frame": {"x":0,"y":602,"w":800,"h":600},
 	"rotated": false,
@@ -24,7 +8,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
 	"sourceSize": {"w":800,"h":600}
 },
-"Estrella2":
+"Capa100_1":
 {
 	"frame": {"x":0,"y":1204,"w":800,"h":600},
 	"rotated": false,
@@ -32,7 +16,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
 	"sourceSize": {"w":800,"h":600}
 },
-"Estrella3":
+"Capa114":
 {
 	"frame": {"x":802,"y":602,"w":800,"h":600},
 	"rotated": false,
@@ -40,13 +24,21 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
 	"sourceSize": {"w":800,"h":600}
 },
-"Gatoentero3":
+"Capa24":
 {
 	"frame": {"x":802,"y":1204,"w":800,"h":600},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
 	"sourceSize": {"w":800,"h":600}
+},
+"Tierra":
+{
+	"frame": {"x":0,"y":0,"w":1600,"h":600},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1600,"h":600},
+	"sourceSize": {"w":1600,"h":600}
 }},
 "meta": {
 	"app": "Adobe Animate",
