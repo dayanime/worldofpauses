@@ -1,0 +1,51 @@
+﻿{"frames": {
+
+"BMP_063e05a5_0eeb_4b33_a925_fae40f39fe52":
+{
+	"frame": {"x":828,"y":602,"w":800,"h":600},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
+	"sourceSize": {"w":800,"h":600}
+},
+"BMP_4dd86fd4_c4a9_4922_b36e_e0cf899b715c":
+{
+	"frame": {"x":0,"y":602,"w":826,"h":600},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":826,"h":600},
+	"sourceSize": {"w":826,"h":600}
+},
+"Tierra":
+{
+	"frame": {"x":0,"y":0,"w":1600,"h":600},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1600,"h":600},
+	"sourceSize": {"w":1600,"h":600}
+},
+"back":
+{
+	"frame": {"x":809,"y":1204,"w":800,"h":600},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
+	"sourceSize": {"w":800,"h":600}
+},
+"mano2":
+{
+	"frame": {"x":0,"y":1204,"w":807,"h":600},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":807,"h":600},
+	"sourceSize": {"w":807,"h":600}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "21.0.5.40714",
+	"image": "index_atlas_19.png",
+	"format": "undefined",
+	"size": {"w":2048,"h":2048},
+	"scale": "1"
+}
+}
