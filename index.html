@@ -14,6 +14,26 @@
 <title>index</title>
 <!-- write your code here -->
 <style>
+@font-face
+{
+    font-family: 'Life Savers ExtraBold';
+    src: url("fonts/LifeSavers-ExtraBold.ttf");
+}
+@font-face
+{
+    font-family: 'Life Savers Bold';
+    src: url("fonts/LifeSavers-Bold.ttf");
+}
+@font-face
+{
+    font-family: 'Life Savers Regular';
+    src: url("fonts/LifeSavers-Regular.ttf");
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Life+Savers&display=swap" rel="stylesheet">
+<style>
   #animation_container, #_preload_div_ {
 	position:absolute;
 	margin:auto;
@@ -80,9 +100,6 @@ function playSound(id, loop, offset) {
 	return createjs.Sound.play(id, {'interrupt':createjs.Sound.INTERRUPT_EARLY, 'loop': loop, 'offset': offset});}
 </script>
 <!-- write your code here -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Life+Savers&display=swap" rel="stylesheet">
 </head>
 <body onload="init();" style="margin:0px; background-color:black;" >
 	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:800px; height:600px">
