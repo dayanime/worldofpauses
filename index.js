@@ -16194,6 +16194,7 @@ if (reversed == null) { reversed = false; }
 		this.btn_play_escena13.on("click", irACatorce.bind(this));
 		
 		function irACatorce(e) {
+			createjs.Sound.stop();
 			createjs.Sound.play("musicaFinal", {interrupt: createjs.Sound.INTERRUPT_ANY, loop:-1});
 			this.parent.cambiarEscenario(new lib.mc_escenario14());
 		}
@@ -17471,26 +17472,26 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_1.png?1628438923990", id:"index_atlas_1"},
-		{src:"images/index_atlas_2.png?1628438923991", id:"index_atlas_2"},
-		{src:"images/index_atlas_3.png?1628438923991", id:"index_atlas_3"},
-		{src:"images/index_atlas_4.png?1628438923992", id:"index_atlas_4"},
-		{src:"images/index_atlas_5.png?1628438923992", id:"index_atlas_5"},
-		{src:"images/index_atlas_6.png?1628438923993", id:"index_atlas_6"},
-		{src:"images/index_atlas_7.png?1628438923994", id:"index_atlas_7"},
-		{src:"images/index_atlas_8.png?1628438923994", id:"index_atlas_8"},
-		{src:"images/index_atlas_9.png?1628438923995", id:"index_atlas_9"},
-		{src:"images/index_atlas_10.png?1628438923996", id:"index_atlas_10"},
-		{src:"images/index_atlas_11.png?1628438923997", id:"index_atlas_11"},
-		{src:"images/index_atlas_12.png?1628438923999", id:"index_atlas_12"},
-		{src:"images/index_atlas_13.png?1628438924000", id:"index_atlas_13"},
-		{src:"images/index_atlas_14.png?1628438924003", id:"index_atlas_14"},
-		{src:"images/index_atlas_15.png?1628438924006", id:"index_atlas_15"},
-		{src:"images/index_atlas_16.png?1628438924012", id:"index_atlas_16"},
-		{src:"images/index_atlas_17.png?1628438924019", id:"index_atlas_17"},
-		{src:"sounds/musicaFinal.mp3?1628438924861", id:"musicaFinal"},
-		{src:"sounds/musicaDrama.mp3?1628438924861", id:"musicaDrama"},
-		{src:"sounds/musicaIntro.mp3?1628438924861", id:"musicaIntro"}
+		{src:"images/index_atlas_1.png?1628439540827", id:"index_atlas_1"},
+		{src:"images/index_atlas_2.png?1628439540828", id:"index_atlas_2"},
+		{src:"images/index_atlas_3.png?1628439540829", id:"index_atlas_3"},
+		{src:"images/index_atlas_4.png?1628439540829", id:"index_atlas_4"},
+		{src:"images/index_atlas_5.png?1628439540830", id:"index_atlas_5"},
+		{src:"images/index_atlas_6.png?1628439540831", id:"index_atlas_6"},
+		{src:"images/index_atlas_7.png?1628439540831", id:"index_atlas_7"},
+		{src:"images/index_atlas_8.png?1628439540832", id:"index_atlas_8"},
+		{src:"images/index_atlas_9.png?1628439540833", id:"index_atlas_9"},
+		{src:"images/index_atlas_10.png?1628439540834", id:"index_atlas_10"},
+		{src:"images/index_atlas_11.png?1628439540835", id:"index_atlas_11"},
+		{src:"images/index_atlas_12.png?1628439540837", id:"index_atlas_12"},
+		{src:"images/index_atlas_13.png?1628439540838", id:"index_atlas_13"},
+		{src:"images/index_atlas_14.png?1628439540841", id:"index_atlas_14"},
+		{src:"images/index_atlas_15.png?1628439540845", id:"index_atlas_15"},
+		{src:"images/index_atlas_16.png?1628439540850", id:"index_atlas_16"},
+		{src:"images/index_atlas_17.png?1628439540857", id:"index_atlas_17"},
+		{src:"sounds/musicaFinal.mp3?1628439541664", id:"musicaFinal"},
+		{src:"sounds/musicaDrama.mp3?1628439541664", id:"musicaDrama"},
+		{src:"sounds/musicaIntro.mp3?1628439541664", id:"musicaIntro"}
 	],
 	preloads: []
 };
