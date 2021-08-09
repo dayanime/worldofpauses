@@ -15963,7 +15963,7 @@ if (reversed == null) { reversed = false; }
 	this.btn_play_luna.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	// texto
-	this.txt_mundo_p2 = new cjs.Text("y lo direccionaban a una probable y temible destrucción. ", "bold 25px 'Life Savers ExtraBold'", "#FFFFFF");
+	this.txt_mundo_p2 = new cjs.Text("y lo dirigían a una probable y temible destrucción. ", "bold 25px 'Life Savers ExtraBold'", "#FFFFFF");
 	this.txt_mundo_p2.name = "txt_mundo_p2";
 	this.txt_mundo_p2.textAlign = "center";
 	this.txt_mundo_p2.lineHeight = 33;
@@ -16220,25 +16220,54 @@ if (reversed == null) { reversed = false; }
 			this.isSingleFrame = true;
 		}
 		var root = this;
-		var l = 0;
-		var speed = 76;
-		var txt = String(this.txt_escena14_2.text);
-		this.txt_escena14_2.text= "";
+		var i = 0;
+		var j = 0;
+		var k = 0;
+		var speed = 85;
+		var txt = String(this.txt_escena14_1.text);
+		var txt2 = String(this.txt_escena14_1_2.text);
+		var txt3 = String(this.txt_escena14_1_3.text);
+		
+		this.txt_escena14_1.text= "";
+		this.txt_escena14_1_2.text= "";
+		this.txt_escena14_1_3.text= "";
+		
 		this.btn_play_escena14.visible = false;
 		
-		function typeWriter() {
-		  if (l < txt.length) {
-		    root.txt_escena14_2.text += txt.charAt(l);
-		    l++;
-		    setTimeout(typeWriter, speed);
+		function typeWriterPart1(callback1, callback2) {
+		  if (i < txt.length) {
+		    root.txt_escena14_1.text += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriterPart1, speed, callback1, callback2);
 		  }
-		  if (l === txt.length){
-			root.btn_play_escena14.visible = true;
-			//this.stop();
+		  if (i === txt.length){
+		            callback1(callback2);
 		  }
 		}
 		
-		typeWriter();
+		function typeWriterPart2(callback) {
+		  if (j < txt2.length) {
+		    root.txt_escena14_1_2.text += txt2.charAt(j);
+		    j++;
+		    setTimeout(typeWriterPart2, speed, callback);
+		  }
+		  if (j === txt2.length){
+			callback();
+		  }
+		}
+		
+		function typeWriterPart3() {
+		  if (k < txt3.length) {
+		    root.txt_escena14_1_3.text += txt3.charAt(k);
+		    k++;
+		    setTimeout(typeWriterPart3, speed);
+		  }
+		  if (k === txt3.length){
+			root.btn_play_escena14.visible = true;
+		  }
+		}
+		
+		typeWriterPart1(typeWriterPart2,typeWriterPart3);
 		
 		this.btn_play_escena14.on("click", irAQuince.bind(this));
 		
@@ -16259,15 +16288,31 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.btn_play_escena14).wait(1));
 
 	// texto2
-	this.txt_escena14_2 = new cjs.Text("Un día fue al patio y vio que el árbol\nde los pájaros había cambiado.\nEra rosa, era realmente bello.\nEl viento iba desplomando sus flores.\nLos pajaritos empezaron a despertarse\ny con sus picos iban tirando\nlos pétalos también.", "bold 27px 'Life Savers ExtraBold'");
-	this.txt_escena14_2.name = "txt_escena14_2";
-	this.txt_escena14_2.textAlign = "center";
-	this.txt_escena14_2.lineHeight = 35;
-	this.txt_escena14_2.lineWidth = 477;
-	this.txt_escena14_2.parent = this;
-	this.txt_escena14_2.setTransform(419.5,114.7);
+	this.txt_escena14_1_3 = new cjs.Text("Los pajaritos empezaron a despertarse y con sus picos iban tirando los pétalos también.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena14_1_3.name = "txt_escena14_1_3";
+	this.txt_escena14_1_3.textAlign = "center";
+	this.txt_escena14_1_3.lineHeight = 35;
+	this.txt_escena14_1_3.lineWidth = 298;
+	this.txt_escena14_1_3.parent = this;
+	this.txt_escena14_1_3.setTransform(399,401);
 
-	this.timeline.addTween(cjs.Tween.get(this.txt_escena14_2).wait(1));
+	this.txt_escena14_1_2 = new cjs.Text("El viento iba desplomando sus flores.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena14_1_2.name = "txt_escena14_1_2";
+	this.txt_escena14_1_2.textAlign = "center";
+	this.txt_escena14_1_2.lineHeight = 35;
+	this.txt_escena14_1_2.lineWidth = 325;
+	this.txt_escena14_1_2.parent = this;
+	this.txt_escena14_1_2.setTransform(358.5,299.95);
+
+	this.txt_escena14_1 = new cjs.Text("Un día fue al patio y vio que el árbol de los pájaros había cambiado. Era rosa, era realmente bello.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena14_1.name = "txt_escena14_1";
+	this.txt_escena14_1.textAlign = "center";
+	this.txt_escena14_1.lineHeight = 35;
+	this.txt_escena14_1.lineWidth = 410;
+	this.txt_escena14_1.parent = this;
+	this.txt_escena14_1.setTransform(217,126.65);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.txt_escena14_1},{t:this.txt_escena14_1_2},{t:this.txt_escena14_1_3}]}).wait(1));
 
 	// back
 	this.instance = new lib.back_esc14();
@@ -16887,13 +16932,13 @@ if (reversed == null) { reversed = false; }
 	this.btn_play_escena8.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	// texto
-	this.txt_escena8 = new cjs.Text("Salió para tratar de olvidar su juguete favorito. Entonces, sus orejas escucharon el caos de los píos píos. Seguramente les tiraron pan, pensó. Se preparó para ir a correr unos cuantos gorriones.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena8 = new cjs.Text("Salió para tratar de olvidar su juguete favorito.\nEntonces, sus orejas escucharon el caos de los píos píos.\n \nSeguramente les tiraron pan, pensó.\nSe preparó para ir a correr unos cuantos gorriones.", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_escena8.name = "txt_escena8";
-	this.txt_escena8.textAlign = "center";
+	this.txt_escena8.textAlign = "right";
 	this.txt_escena8.lineHeight = 35;
-	this.txt_escena8.lineWidth = 450;
+	this.txt_escena8.lineWidth = 698;
 	this.txt_escena8.parent = this;
-	this.txt_escena8.setTransform(569.8,11);
+	this.txt_escena8.setTransform(785.85,23.95);
 
 	this.txt_escena8_2 = new cjs.Text("  Solo tendría\nque esperar a\nque bajaran a\nbuscar las migas. ", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_escena8_2.name = "txt_escena8_2";
@@ -17095,41 +17140,86 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
-		/*var root = this;
-		var l = 0;
-		var speed = 76;
+		var root = this;
+		var i = 0;
+		var j = 0;
+		var k = 0;
+		var speed = 85;
 		var txt = String(this.txt_escena6_1.text);
+		var txt2 = String(this.txt_escena6_1_2.text);
+		var txt3 = String(this.txt_escena6_1_3.text);
+		
 		this.txt_escena6_1.text= "";
+		this.txt_escena6_1_2.text= "";
+		this.txt_escena6_1_3.text= "";
+		
 		this.back_escenario6.stop();
-		function typeWriter() {
-		  if (l < txt.length) {
-		    root.txt_escena6_1.text += txt.charAt(l);
-		    l++;
-		    setTimeout(typeWriter, speed);
+		
+		function typeWriterPart1(callback1, callback2) {
+		  if (i < txt.length) {
+		    root.txt_escena6_1.text += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriterPart1, speed, callback1, callback2);
 		  }
-		  
-		  if (l === txt.length){
+		  if (i === txt.length){
+		            callback1(callback2);
+		  }
+		}
+		
+		function typeWriterPart2(callback) {
+		  if (j < txt2.length) {
+		    root.txt_escena6_1_2.text += txt2.charAt(j);
+		    j++;
+		    setTimeout(typeWriterPart2, speed, callback);
+		  }
+		  if (j === txt2.length){
+			callback();
+		  }
+		}
+		
+		function typeWriterPart3() {
+		  if (k < txt3.length) {
+		    root.txt_escena6_1_3.text += txt3.charAt(k);
+		    k++;
+		    setTimeout(typeWriterPart3, speed);
+		  }
+		  if (k === txt3.length){
 			root.back_escenario6.gotoAndPlay("start");
 		  }
 		}
 		
-		typeWriter();
-		*/
+		typeWriterPart1(typeWriterPart2,typeWriterPart3);
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// txt
-	this.txt_escena6_1 = new cjs.Text("Un día, algo extraño sucedió.\nEn el momento donde estaba totalmente concentrado, agazapado, con la cola emocionada, \nacechando su pelota, \nle pegó un zarpazo \ne hizo que flotara en el aire.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena6_1_3 = new cjs.Text("Le pegó un zarpazo \ne hizo que flotara en el aire.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena6_1_3.name = "txt_escena6_1_3";
+	this.txt_escena6_1_3.textAlign = "center";
+	this.txt_escena6_1_3.lineHeight = 35;
+	this.txt_escena6_1_3.lineWidth = 249;
+	this.txt_escena6_1_3.parent = this;
+	this.txt_escena6_1_3.setTransform(603,399.5);
+
+	this.txt_escena6_1 = new cjs.Text("Un día, algo extraño sucedió.", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_escena6_1.name = "txt_escena6_1";
 	this.txt_escena6_1.textAlign = "center";
 	this.txt_escena6_1.lineHeight = 35;
-	this.txt_escena6_1.lineWidth = 433;
+	this.txt_escena6_1.lineWidth = 213;
 	this.txt_escena6_1.parent = this;
-	this.txt_escena6_1.setTransform(400.85,177);
+	this.txt_escena6_1.setTransform(199,108);
 
-	this.timeline.addTween(cjs.Tween.get(this.txt_escena6_1).wait(1));
+	this.txt_escena6_1_2 = new cjs.Text("En el momento donde estaba totalmente concentrado, agazapado, con la cola emocionada, \nacechando su pelota. ", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena6_1_2.name = "txt_escena6_1_2";
+	this.txt_escena6_1_2.textAlign = "center";
+	this.txt_escena6_1_2.lineHeight = 35;
+	this.txt_escena6_1_2.lineWidth = 433;
+	this.txt_escena6_1_2.parent = this;
+	this.txt_escena6_1_2.setTransform(400.85,232);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.txt_escena6_1_2},{t:this.txt_escena6_1},{t:this.txt_escena6_1_3}]}).wait(1));
 
 	// back_escenario6_1
 	this.back_escenario6 = new lib.back_escenario6_1();
@@ -17362,13 +17452,13 @@ if (reversed == null) { reversed = false; }
 	this.btn_play_escena3.setTransform(640,376.9);
 	new cjs.ButtonHelper(this.btn_play_escena3, 0, 1, 2, false, new lib.botonPlay(), 3);
 
-	this.txt_presentacion_gato = new cjs.Text("En un lugar cualquiera, donde sucedía todo, se encontraba una bola de pelos blanca. Su ojo izquierdo era una cruz; su ojo derecho, una canica naranja.", "bold 31px 'Life Savers ExtraBold'");
+	this.txt_presentacion_gato = new cjs.Text("En un lugar cualquiera, donde sucedía todo, se encontraba una bola de pelos blanca.\n\nSu ojo izquierdo era una cruz;\nsu ojo derecho, una canica naranja.", "bold 31px 'Life Savers ExtraBold'");
 	this.txt_presentacion_gato.name = "txt_presentacion_gato";
 	this.txt_presentacion_gato.textAlign = "center";
 	this.txt_presentacion_gato.lineHeight = 40;
-	this.txt_presentacion_gato.lineWidth = 521;
+	this.txt_presentacion_gato.lineWidth = 724;
 	this.txt_presentacion_gato.parent = this;
-	this.txt_presentacion_gato.setTransform(400.55,37.25);
+	this.txt_presentacion_gato.setTransform(401,28.2);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.txt_presentacion_gato},{t:this.btn_play_escena3}]}).wait(1));
 	this.btn_play_escena3.addEventListener("tick", AdobeAn.handleFilterCache);
@@ -17602,26 +17692,26 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_1.png?1628455520630", id:"index_atlas_1"},
-		{src:"images/index_atlas_2.png?1628455520631", id:"index_atlas_2"},
-		{src:"images/index_atlas_3.png?1628455520632", id:"index_atlas_3"},
-		{src:"images/index_atlas_4.png?1628455520632", id:"index_atlas_4"},
-		{src:"images/index_atlas_5.png?1628455520633", id:"index_atlas_5"},
-		{src:"images/index_atlas_6.png?1628455520634", id:"index_atlas_6"},
-		{src:"images/index_atlas_7.png?1628455520634", id:"index_atlas_7"},
-		{src:"images/index_atlas_8.png?1628455520635", id:"index_atlas_8"},
-		{src:"images/index_atlas_9.png?1628455520636", id:"index_atlas_9"},
-		{src:"images/index_atlas_10.png?1628455520637", id:"index_atlas_10"},
-		{src:"images/index_atlas_11.png?1628455520638", id:"index_atlas_11"},
-		{src:"images/index_atlas_12.png?1628455520640", id:"index_atlas_12"},
-		{src:"images/index_atlas_13.png?1628455520641", id:"index_atlas_13"},
-		{src:"images/index_atlas_14.png?1628455520644", id:"index_atlas_14"},
-		{src:"images/index_atlas_15.png?1628455520648", id:"index_atlas_15"},
-		{src:"images/index_atlas_16.png?1628455520654", id:"index_atlas_16"},
-		{src:"images/index_atlas_17.png?1628455520662", id:"index_atlas_17"},
-		{src:"sounds/musicaFinal.mp3?1628455521503", id:"musicaFinal"},
-		{src:"sounds/musicaDrama.mp3?1628455521503", id:"musicaDrama"},
-		{src:"sounds/musicaIntro.mp3?1628455521503", id:"musicaIntro"}
+		{src:"images/index_atlas_1.png?1628480906229", id:"index_atlas_1"},
+		{src:"images/index_atlas_2.png?1628480906230", id:"index_atlas_2"},
+		{src:"images/index_atlas_3.png?1628480906230", id:"index_atlas_3"},
+		{src:"images/index_atlas_4.png?1628480906242", id:"index_atlas_4"},
+		{src:"images/index_atlas_5.png?1628480906243", id:"index_atlas_5"},
+		{src:"images/index_atlas_6.png?1628480906243", id:"index_atlas_6"},
+		{src:"images/index_atlas_7.png?1628480906244", id:"index_atlas_7"},
+		{src:"images/index_atlas_8.png?1628480906245", id:"index_atlas_8"},
+		{src:"images/index_atlas_9.png?1628480906245", id:"index_atlas_9"},
+		{src:"images/index_atlas_10.png?1628480906246", id:"index_atlas_10"},
+		{src:"images/index_atlas_11.png?1628480906248", id:"index_atlas_11"},
+		{src:"images/index_atlas_12.png?1628480906249", id:"index_atlas_12"},
+		{src:"images/index_atlas_13.png?1628480906251", id:"index_atlas_13"},
+		{src:"images/index_atlas_14.png?1628480906253", id:"index_atlas_14"},
+		{src:"images/index_atlas_15.png?1628480906257", id:"index_atlas_15"},
+		{src:"images/index_atlas_16.png?1628480906262", id:"index_atlas_16"},
+		{src:"images/index_atlas_17.png?1628480906270", id:"index_atlas_17"},
+		{src:"sounds/musicaFinal.mp3?1628480907111", id:"musicaFinal"},
+		{src:"sounds/musicaDrama.mp3?1628480907111", id:"musicaDrama"},
+		{src:"sounds/musicaIntro.mp3?1628480907111", id:"musicaIntro"}
 	],
 	preloads: []
 };
