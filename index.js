@@ -7072,7 +7072,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// txt
-	this.txt_escena15_2 = new cjs.Text("Créditos\n\nYamila Gómez\n(corrección de texto, animación y guión)\n\nNicolás Gómez\n(story board, ilustración y animación)\n\nDara Torrez\n(historia, animación y programación)", "bold 27px 'Life Savers ExtraBold'", "#FFFFFF");
+	this.txt_escena15_2 = new cjs.Text("Créditos\n\nYamila Gómez\n(corrección de texto, animación y guion)\n\nNicolás Gómez\n(storyboard, ilustración y animación)\n\nDara Torrez\n(historia, animación y programación)", "bold 27px 'Life Savers ExtraBold'", "#FFFFFF");
 	this.txt_escena15_2.name = "txt_escena15_2";
 	this.txt_escena15_2.textAlign = "center";
 	this.txt_escena15_2.lineHeight = 35;
@@ -7695,6 +7695,28 @@ if (reversed == null) { reversed = false; }
 	this.instance = new lib.fondo8();
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(101));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,800,600);
+
+
+(lib.fondoEscena10 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Fondo
+	this.instance = new lib.Capa94();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(146));
 
 	this._renderFirstFrame();
 
@@ -8997,34 +9019,6 @@ if (reversed == null) { reversed = false; }
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-123.5,-95,247,190);
-
-
-(lib.Interpolación3copia2 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Capa_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#BF7B58").s().p("AhnAxIgDgDIgBgDIAAgBQgCgFAIgDIAPgGIACgBIAFgDIAHgCIABgBIADgCIAHgEIAGgDQAFgDALgDIAPgGQgDgBABgFQAEgUAJgOQAHgLAIgEQAHgDAFAAIgEACQgHAFgIANQgCADAAADIABAAIgBAAQgLALAAANIgBAGIAYgLIAKgEQAYgMAmgMIANgBIAFgBIgMAHIgcAGQgLADgHADIgTALIgKAEIgMAIIgMADIgQAKIgGACIgBABIgSAJIgEAEQgBAAAAABQAAAAAAABQAAAAAAABQAAAAAAABIAAAAIgCABIgDABQgBAAAAAAQgBAAAAAAQAAAAgBAAQAAAAgBAAQgGAFgFAHIAAABQACAEgBACQAAAEgHACQgHgDgIgHgAAaATQgJgCgSgIQgJgEADgFQACgCAHACQAZAOAdgFIAHgCIADAAQAFABAGgCQAJgBAOgFQgUAQghAEIgJAAIgMgBgABpgyIADgBIgDACIAAgBg");
-	this.shape.setTransform(-1.9375,1.075);
-
-	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#D5B479").s().p("AgzBMQgagGgNgSQgBAAAAAAQAAAAAAAAQAAAAAAAAQAAgBAAAAIgBgCIgDgEIgBgBIACgBIABgBQgBAAAAAAQAAgBAAAAQAAgBAAAAQABgBAAgBIAEgEIASgIIABgBIAHgDIAQgJIALgEIANgIIAKgEIASgKQAIgEAKgCIAcgHIAMgHIgFABIgNABQgmANgXAMIgKAEIgZAJIABgGQAAgMAMgKIAAAAIAAgBQgBgCADgEQAIgMAIgFIADgDQgFAAgGADQgKAEgHALQgJAOgDATQgCAGAEABIgQAGQgLADgFADIgFAEIgIAEQgBgGADgFQATg+A0gZQAjgPAsAKQADgCAFAAQAQAAAdAMQAFACABADQAEADAAAGQAAAIgFACIAAAEQAAAFgCAHQgJAZgIALIgDAGQgBADgCAEQgGAKgSAMIgMAIIgBABQgDAFgEgCQgJAFgHABQgaAMgbAAQgMAAgLgCgAgmALQgEAFAJADQAUAJAIACQAJABALgBQAhgDAVgSQgPAHgJABQgGABgEAAIgDgBIgHACQgcAGgZgOIgHgCQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAAAABgABJgnIAAABIADgCIgDABgAhyA4QAFgHAHgFQAAABAAAAQABAAAAAAQABAAAAAAQAAAAABAAIAAAAIgKAHIgFAFIAAgBg");
-	this.shape_1.setTransform(1.25,0.0097);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-12.7,-7.7,25.5,15.5);
 
 
 (lib.Interpolación3copia = function(mode,startPosition,loop,reversed) {
@@ -15327,24 +15321,18 @@ if (reversed == null) { reversed = false; }
 	this.instance_11 = new lib.Interpolación1copia7("synched",0);
 	this.instance_11.setTransform(708.05,307.5,2.3793,2.3793,-90,0,0,4.4,10.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).to({x:655.8,y:415.65},32).to({regY:10.3,scaleX:2.3792,scaleY:2.3792,x:751.35,y:475.95},33).to({regX:0,regY:0,scaleX:2.3793,scaleY:2.5168,x:778.2,y:635.9},19).wait(1));
-
-	// hoja
-	this.instance_12 = new lib.Interpolación3copia2("synched",0);
-	this.instance_12.setTransform(242.55,294.9,2.5236,2.5236,15.0002,0,0,-7.3,4.2);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).to({rotation:44.9993,guide:{path:[242.6,295,243,304.5,243.7,313.6,252.1,425,302,460,343,488.6,364.3,514.9,376.6,530.1,382.4,544.6,400,588.9,351.8,620.1]}},84).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).to({x:655.8,y:415.65},32).to({regY:10.3,scaleX:2.3792,scaleY:2.3792,x:770.1,y:616.1},33).wait(20));
 
 	// fondo_arbol
-	this.instance_13 = new lib.Capa94();
-	this.instance_13.setTransform(128,298,1.5899,1.573);
+	this.instance_12 = new lib.Capa94();
+	this.instance_12.setTransform(57,275,1.5899,1.573);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(85));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(85));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,1399.9,1241.8);
+p.nominalBounds = new cjs.Rectangle(0,0,1328.9,1218.8);
 
 
 (lib.back_esc12 = function(mode,startPosition,loop,reversed) {
@@ -15589,12 +15577,18 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_14).to({regX:210,rotation:-380.1949,guide:{path:[444.9,84.7,440.9,96.3,433,110.3,417,138.6,397,150.6,377,162.7,369,166.8,367,167.7,365,168.5,368.7,170.8,372.4,173,381.8,178.5,391.5,183.5,422.5,199.2,445,203.1,463,206.3,471.5,207.9,480,209.5,479,209.5,464.2,229.4,443.6,247.1,402.3,282.7,373,272.2,377.3,277.1,381.5,282,392.1,293.6,402.4,302.6,435.1,331.5,452,323.5,444.5,338.2,432.9,353.1,409.6,382.9,389,383.7,391.5,391.3,394,398.9,400.6,417.3,408.2,433.1,415.5,448,422.9,458.9]}},145).wait(1));
 
-	// Fondo
-	this.instance_15 = new lib.Capa94();
-	this.instance_15.setTransform(9,87.25);
+	// fondoEscena10
+	this.instance_15 = new lib.fondoEscena10();
+	this.instance_15.setTransform(409,387.25,1,1,0,0,0,400,300);
+	var instance_15Filter_1 = new cjs.ColorFilter(0.74,0.74,0.74,1,66.3,66.3,66.3,0);
+	this.instance_15.filters = [instance_15Filter_1];
+	this.instance_15.cache(-2,-2,804,604);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(146));
+	this.timeline.addTween(cjs.Tween.get(instance_15Filter_1).wait(146));
 
+	this.filterCacheList = [];
+	this.filterCacheList.push({instance: this.instance_15, startFrame:0, endFrame:146, x:-2, y:-2, w:804, h:604});
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
@@ -16388,7 +16382,7 @@ if (reversed == null) { reversed = false; }
 	this.btn_play_escena13.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	// texto
-	this.txt_escena13 = new cjs.Text("Sintió que su corazón \ntambién se había pausado. A pesar\nde que los días seguían pasando\ny el calendario cambiaba,\nsu reloj interno\nhabía quedado\ndescoordinado.", "bold 27px 'Life Savers ExtraBold'", "#FFFFFF");
+	this.txt_escena13 = new cjs.Text("Sintió que su corazón también se había\npausado. A pesar de que los días seguían\npasando y el calendario cambiaba, su reloj\ninterno había quedado descoordinado.\n\nY el tiempo no esperaba a nadie,\nseguía hacia adelante...", "bold 27px 'Life Savers ExtraBold'", "#FFFFFF");
 	this.txt_escena13.name = "txt_escena13";
 	this.txt_escena13.textAlign = "right";
 	this.txt_escena13.lineHeight = 35;
@@ -16406,7 +16400,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.mc_escenario13, new cjs.Rectangle(-128.7,-306.9,1399.9,1241.8), null);
+}).prototype = getMCSymbolPrototype(lib.mc_escenario13, new cjs.Rectangle(-128.7,-306.9,1328.9,1218.8), null);
 
 
 (lib.mc_escenario12 = function(mode,startPosition,loop,reversed) {
@@ -16552,7 +16546,7 @@ if (reversed == null) { reversed = false; }
 	this.btn_play_escena11.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	// texto
-	this.txt_escena11 = new cjs.Text("Al día siguiente, se le ocurrió que tal vez los niños del amo vendrían a visitarlo y, así, ya se olvidaría de todo lo demás. Pero ellos no volvieron. \nEl amo tenía la enfermedad de las pausas, lo había escuchado hablando. ", "bold 27px 'Life Savers ExtraBold'", "#FFFFFF");
+	this.txt_escena11 = new cjs.Text("Al día siguiente, se le ocurrió que tal vez los niños del amo vendrían a visitarlo y, así, ya se olvidaría de todo lo demás. \n\nPero ellos no volvieron. \nEl amo tenía la enfermedad\nde las pausas, lo había escuchado hablando. ", "bold 27px 'Life Savers ExtraBold'", "#FFFFFF");
 	this.txt_escena11.name = "txt_escena11";
 	this.txt_escena11.textAlign = "right";
 	this.txt_escena11.lineHeight = 35;
@@ -16634,7 +16628,7 @@ if (reversed == null) { reversed = false; }
 	this.btn_play_escena10.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	// texto
-	this.txt_escena10 = new cjs.Text("El gatito estaba enojado. No podía parar de golpear su cola de un lado a otro. Se fue refunfuñando a su cama.\nEstaba aburrido. Estaba molesto.", "bold 27px 'Life Savers ExtraBold'", "#FF6600");
+	this.txt_escena10 = new cjs.Text("El gatito estaba enojado. No podía parar de golpear su cola de un lado a otro. Se fue refunfuñando a su cama.\nEstaba aburrido. Estaba molesto.", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_escena10.name = "txt_escena10";
 	this.txt_escena10.textAlign = "center";
 	this.txt_escena10.lineHeight = 35;
@@ -16649,6 +16643,7 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(398.25,315.2,1,1,0,0,0,406.9,401.6);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.instance.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	this._renderFirstFrame();
 
@@ -16932,7 +16927,7 @@ if (reversed == null) { reversed = false; }
 	this.btn_play_escena8.addEventListener("tick", AdobeAn.handleFilterCache);
 
 	// texto
-	this.txt_escena8 = new cjs.Text("Salió para tratar de olvidar su juguete favorito.\nEntonces, sus orejas escucharon el caos de los píos píos.\n \nSeguramente les tiraron pan, pensó.\nSe preparó para ir a correr unos cuantos gorriones.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena8 = new cjs.Text("Salió para tratar de olvidar su juguete favorito.\nEntonces, sus orejas escucharon el caos de los píos píos.\n \n<<Seguramente les tiraron pan>> , pensó.\nSe preparó para ir a correr unos cuantos gorriones.", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_escena8.name = "txt_escena8";
 	this.txt_escena8.textAlign = "right";
 	this.txt_escena8.lineHeight = 35;
@@ -17195,13 +17190,13 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// txt
-	this.txt_escena6_1_3 = new cjs.Text("Le pegó un zarpazo \ne hizo que flotara en el aire.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena6_1_3 = new cjs.Text("De repente, le pegó un zarpazo\ne hizo que flotara en el aire.", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_escena6_1_3.name = "txt_escena6_1_3";
 	this.txt_escena6_1_3.textAlign = "center";
 	this.txt_escena6_1_3.lineHeight = 35;
-	this.txt_escena6_1_3.lineWidth = 249;
+	this.txt_escena6_1_3.lineWidth = 373;
 	this.txt_escena6_1_3.parent = this;
-	this.txt_escena6_1_3.setTransform(603,399.5);
+	this.txt_escena6_1_3.setTransform(602,412.8);
 
 	this.txt_escena6_1 = new cjs.Text("Un día, algo extraño sucedió.", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_escena6_1.name = "txt_escena6_1";
@@ -17211,13 +17206,13 @@ if (reversed == null) { reversed = false; }
 	this.txt_escena6_1.parent = this;
 	this.txt_escena6_1.setTransform(199,108);
 
-	this.txt_escena6_1_2 = new cjs.Text("En el momento donde estaba totalmente concentrado, agazapado, con la cola emocionada, \nacechando su pelota. ", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_escena6_1_2 = new cjs.Text("Él estaba totalmente concentrado, agazapado, con la cola emocionada, \nacechando su pelota. ", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_escena6_1_2.name = "txt_escena6_1_2";
 	this.txt_escena6_1_2.textAlign = "center";
 	this.txt_escena6_1_2.lineHeight = 35;
 	this.txt_escena6_1_2.lineWidth = 433;
 	this.txt_escena6_1_2.parent = this;
-	this.txt_escena6_1_2.setTransform(400.85,232);
+	this.txt_escena6_1_2.setTransform(400.85,248);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.txt_escena6_1_2},{t:this.txt_escena6_1},{t:this.txt_escena6_1_3}]}).wait(1));
 
@@ -17373,7 +17368,7 @@ if (reversed == null) { reversed = false; }
 	this.btn_play_escena4.setTransform(640,380.65);
 	new cjs.ButtonHelper(this.btn_play_escena4, 0, 1, 2, false, new lib.botonPlay(), 3);
 
-	this.txt_pensamientos_gato = new cjs.Text("Todos los días, jugaba con las aves del patio, los niños del amo, las hojas que traía el viento, las gotas que rebotaban en los charcos cuando comenzaba una pequeña llovizna.", "bold 27px 'Life Savers ExtraBold'");
+	this.txt_pensamientos_gato = new cjs.Text("Todos los días jugaba con las aves del patio, los niños del amo, las hojas que traía el viento, las gotas que rebotaban en los charcos cuando comenzaba una pequeña llovizna.", "bold 27px 'Life Savers ExtraBold'");
 	this.txt_pensamientos_gato.name = "txt_pensamientos_gato";
 	this.txt_pensamientos_gato.textAlign = "center";
 	this.txt_pensamientos_gato.lineHeight = 35;
@@ -17692,26 +17687,26 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_1.png?1628480906229", id:"index_atlas_1"},
-		{src:"images/index_atlas_2.png?1628480906230", id:"index_atlas_2"},
-		{src:"images/index_atlas_3.png?1628480906230", id:"index_atlas_3"},
-		{src:"images/index_atlas_4.png?1628480906242", id:"index_atlas_4"},
-		{src:"images/index_atlas_5.png?1628480906243", id:"index_atlas_5"},
-		{src:"images/index_atlas_6.png?1628480906243", id:"index_atlas_6"},
-		{src:"images/index_atlas_7.png?1628480906244", id:"index_atlas_7"},
-		{src:"images/index_atlas_8.png?1628480906245", id:"index_atlas_8"},
-		{src:"images/index_atlas_9.png?1628480906245", id:"index_atlas_9"},
-		{src:"images/index_atlas_10.png?1628480906246", id:"index_atlas_10"},
-		{src:"images/index_atlas_11.png?1628480906248", id:"index_atlas_11"},
-		{src:"images/index_atlas_12.png?1628480906249", id:"index_atlas_12"},
-		{src:"images/index_atlas_13.png?1628480906251", id:"index_atlas_13"},
-		{src:"images/index_atlas_14.png?1628480906253", id:"index_atlas_14"},
-		{src:"images/index_atlas_15.png?1628480906257", id:"index_atlas_15"},
-		{src:"images/index_atlas_16.png?1628480906262", id:"index_atlas_16"},
-		{src:"images/index_atlas_17.png?1628480906270", id:"index_atlas_17"},
-		{src:"sounds/musicaFinal.mp3?1628480907111", id:"musicaFinal"},
-		{src:"sounds/musicaDrama.mp3?1628480907111", id:"musicaDrama"},
-		{src:"sounds/musicaIntro.mp3?1628480907111", id:"musicaIntro"}
+		{src:"images/index_atlas_1.png?1628649841584", id:"index_atlas_1"},
+		{src:"images/index_atlas_2.png?1628649841584", id:"index_atlas_2"},
+		{src:"images/index_atlas_3.png?1628649841585", id:"index_atlas_3"},
+		{src:"images/index_atlas_4.png?1628649841586", id:"index_atlas_4"},
+		{src:"images/index_atlas_5.png?1628649841587", id:"index_atlas_5"},
+		{src:"images/index_atlas_6.png?1628649841588", id:"index_atlas_6"},
+		{src:"images/index_atlas_7.png?1628649841588", id:"index_atlas_7"},
+		{src:"images/index_atlas_8.png?1628649841589", id:"index_atlas_8"},
+		{src:"images/index_atlas_9.png?1628649841590", id:"index_atlas_9"},
+		{src:"images/index_atlas_10.png?1628649841591", id:"index_atlas_10"},
+		{src:"images/index_atlas_11.png?1628649841592", id:"index_atlas_11"},
+		{src:"images/index_atlas_12.png?1628649841594", id:"index_atlas_12"},
+		{src:"images/index_atlas_13.png?1628649841596", id:"index_atlas_13"},
+		{src:"images/index_atlas_14.png?1628649841598", id:"index_atlas_14"},
+		{src:"images/index_atlas_15.png?1628649841602", id:"index_atlas_15"},
+		{src:"images/index_atlas_16.png?1628649841607", id:"index_atlas_16"},
+		{src:"images/index_atlas_17.png?1628649841614", id:"index_atlas_17"},
+		{src:"sounds/musicaFinal.mp3?1628649842507", id:"musicaFinal"},
+		{src:"sounds/musicaDrama.mp3?1628649842507", id:"musicaDrama"},
+		{src:"sounds/musicaIntro.mp3?1628649842507", id:"musicaIntro"}
 	],
 	preloads: []
 };
